@@ -1,0 +1,26 @@
+name: ethio_swift
+
+description: A new Flutter project for EthioSwift bus tracking and ticketing.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.5.3
+  provider: ^6.1.1
+  intl: ^0.18.1
+  font_awesome_flutter: ^10.6.0
+  flutter_svg: ^2.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,43 @@
+{
+    // The base image for the Codespace environment. We use a standardized
+    // Microsoft image that is based on Debian/Ubuntu, which is required
+    // for Flutter's dependency management (glibc and apt-get).
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+    "features": {
+        // Essential tools for general development, including git, zsh, etc.
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "true",
+            "upgradePackages": "true"
+        }
+        // You can add Node.js, Python, or other features here if needed.
+    },
+
+    "postCreateCommand": {
+        // This command runs once after the Codespace is created.
+        // It's used here to ensure the latest system packages are available.
+        "update": "sudo apt-get update"
+    },
+
+    "customizations": {
+        // VS Code extensions for Dart and Flutter development
+        "vscode": {
+            "extensions": [
+                "Dart-Code.dart-code",
+                "Dart-Code.flutter"
+            ],
+            // Set up environment variables to make the terminal path setup easier
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "/bin/bash"
+                    }
+                }
+            }
+        }
+    },
+
+    // When the Codespace is created, forward the necessary ports for Flutter web server
+    "forwardPorts": [8080, 5000, 5500]
+}
