@@ -19,7 +19,7 @@ class SettingsScreen extends StatelessWidget {
             [
               _buildSettingsItem(context, Icons.person_outline, 'Profile Information', onTap: () {}),
               _buildSettingsItem(context, Icons.lock_outline, 'Change Password / PIN', onTap: () {}),
-              _buildSettingsItem(context, Icons.email_outlined, 'Manage Notifications', onTap: () {}),
+              _buildSettingsItem(context, Icons.email_outlined, 'Manage Notifications', onTap: () {}), // CHANGED: {} to () {}
             ],
           ),
           _buildSettingsSection(
@@ -43,7 +43,7 @@ class SettingsScreen extends StatelessWidget {
             [
               _buildSettingsItem(context, Icons.info_outline, 'About EthioSwift', onTap: () {}),
               _buildSettingsItem(context, Icons.policy_outlined, 'Privacy Policy', onTap: () {}),
-              _buildSettingsItem(context, Icons.call_outlined, 'Contact Support', onTap: () {}),
+              _buildSettingsItem(context, Icons.call_outlined, 'Contact Support', onTap: () {}), // CHANGED: {} to () {}
             ],
           ),
           const SizedBox(height: 40),
